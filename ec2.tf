@@ -4,7 +4,7 @@ data "aws_ami" "amazon-linux-3" {
 
   filter {
     name   = "name"
-    values = ["al2023-ami-2023*"] 
+    values = ["al2023-ami-2023*"]
   }
 
   filter {
@@ -21,6 +21,7 @@ data "aws_ami" "amazon-linux-3" {
     values = ["x86_64"]
   }
 }
+
 #resource block is used to create resource in cloud
 resource "aws_instance" "web" {
   ami           = data.aws_ami.amazon-linux-3.id
@@ -31,3 +32,5 @@ resource "aws_instance" "web" {
     Name = "ProdServer"
   }
 }
+
+
