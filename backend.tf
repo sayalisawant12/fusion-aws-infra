@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "fusion-aws-infra-tfstate-dev"
+    bucket = "aws-infra-state"
     key    = "terraform.tfstate"
     region = "ap-south-1"
   }
